@@ -1,0 +1,18 @@
+name: rollback
+
+on: workflow_dispatch
+
+jobs:
+  build-version:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+    - name: git
+      run: |
+
+        git log 
+    
