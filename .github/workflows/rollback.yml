@@ -17,4 +17,5 @@ jobs:
         git log -n 1 --skip 1 --pretty=format:"%H"
         echo "COMMIT_ID=$(git log -n 1 --skip 1 --pretty=format:"%H")" >> $GITHUB_ENV
         git reset --soft ${{env.COMMIT_ID}}
+        git push
     
