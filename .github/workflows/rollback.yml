@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: '0'
-        ssh-key: ${{ secrets.PUSH_KEY }}
+        ssh-key: ${{ secrets.KEY }}
      
     - name: git
       run: |
