@@ -13,9 +13,8 @@ jobs:
         fetch-depth: '0'
     - name: git
       run: |
-
         git config user.name "Github Bot"
-        git config user.email ""
-        echo "COMMIT_ID=$(git log -n 1 --pretty=format:"%H")" >> $GITHUB_ENV
-        git revert "$COMMIT_ID"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        COMMIT_ID=$(git log -n 1 --pretty=format:"%H")
+        git revert "$COMMIT_ID" --no-edit
     
