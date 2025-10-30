@@ -15,8 +15,8 @@ jobs:
      
     - name: git
       run: |
-        git config user.name "nylinUA"
-        git config user.email "nylin@ualberta.ca"
+        git config user.name "Github Bot"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
         COMMIT_ID=$(git log -n 1 --pretty=format:"%H")
         git revert -m 1 "$COMMIT_ID" --no-edit
         git push origin main
