@@ -17,5 +17,5 @@ jobs:
         git config user.name "Github Bot"
         git config user.email ""
         echo "COMMIT_ID=$(git log -n 1 --pretty=format:"%H")" >> $GITHUB_ENV
-        git revert ${{env.COMMIT_ID}}
+        git revert "$COMMIT_ID"
     
